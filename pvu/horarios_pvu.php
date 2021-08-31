@@ -13,16 +13,17 @@
     $mifecha= date('d-M-Y H:i:s', $time);
     
     $dia_mas = strtotime('+1 day', strtotime($mifecha));
-    echo "Fecha       |      Grupo<br/>";
+    echo "<table border=1>";
+    echo "<tr><th>Fecha</th><th>Grupo</th></tr>";
     for($i = $group; ; $i++)
     {
         if($i > $groups_quantity)
             $i = 1;
         
         if($i == $group)
-            echo "<strong>".$mifecha . " Group " . $i . "</strong><br/>";
+            echo "<tr><td><strong>".$mifecha."</strong></td><td><strong>Group " . $i . "</strong></td></tr>";
         else
-            echo $mifecha . " Group " . $i . "<br/>";
+            echo "<tr><td>".$mifecha."</td><td>Group " . $i . "</td></tr>";
         
         $nueva_fecha = strtotime($factor, strtotime($mifecha));
         $mifecha= date('d-M-Y H:i:s', $nueva_fecha);
@@ -30,5 +31,7 @@
         if($nueva_fecha == $dia_mas)
             break;
     }
+    
+    echo "</table>";
 
 ?>
