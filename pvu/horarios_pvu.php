@@ -10,23 +10,46 @@
     $group = $_GET["group"]; //10
     
     $time = strtotime($hour);
-    $mifecha= date('d-M-Y H:i:s', $time);
+    $mifecha= date('d-m-Y H:i:s', $time);
     
     $dia_mas = strtotime('+1 day', strtotime($mifecha));
-    echo "<table border=1>";
-    echo "<tr><th>Fecha</th><th>Grupo</th></tr>";
+    echo "<table border=1 style='max-width: 400px; font-family:\"Courier New\", Courier, monospace; font-size:80%'>";
+    echo "<tr>";
+    $counter = 0;
     for($i = $group; ; $i++)
     {
         if($i > $groups_quantity)
             $i = 1;
         
-        if($i == $group)
-            echo "<tr><td><strong>".$mifecha."</strong></td><td><strong>Group " . $i . "</strong></td></tr>";
-        else
-            echo "<tr><td>".$mifecha."</td><td>Group " . $i . "</td></tr>";
+        echo "<th><strong>Group " . $i . "</strong></th>";
+        
+        $counter+=1;
+        if($counter == $groups_quantity)
+            break;
+    }
+    echo "</tr>";
+    $counter = 0;
+    for($i = $group; ; $i++)
+    {
+        if($i > $groups_quantity)
+            $i = 1;
+            
+        if($counter == 0)
+        {
+            echo "<tr>";
+        }
+        
+        echo "<td>".$mifecha."</td>";
+        
+        $counter+=1;
+        if($counter == $groups_quantity)
+        {
+            echo "</tr>";
+            $counter = 0;
+        }
         
         $nueva_fecha = strtotime($factor, strtotime($mifecha));
-        $mifecha= date('d-M-Y H:i:s', $nueva_fecha);
+        $mifecha= date('d-m-Y H:i:s', $nueva_fecha);
         
         if($nueva_fecha == $dia_mas)
             break;
