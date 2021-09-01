@@ -8,11 +8,11 @@
     <br/><br/>
     Y te genera todos los horarios de todos los grupos.
     <br/><br/>
-    Group Quantity: <input name="group_quantity" value="10"/>
+    Group Quantity: <input name="group_quantity" value="6"/>
     <br/>
-    Group: <input name="group" value="9"/>
+    Group: <input name="group" value="4"/>
     <br/>
-    Hour of group: <input name="hour" value="01-09-2021 08:22:00"/>
+    Hour of group: <input name="hour" value="01-9-2021 10:06:00"/>
     <br/>
     Factor: <input name="factor" value="+20 minute"/>
     <br/>
