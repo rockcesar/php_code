@@ -10,7 +10,7 @@
     <br/><br/>
     Group Quantity: <input name="group_quantity" value="6"/>
     <br/>
-    Group: <input name="group" value="4"/>
+    Group: <input name="group" value="1"/>
     <br/>
     Hour of group: <input name="hour" value="01-9-2021 23:36:00"/>
     <br/>
