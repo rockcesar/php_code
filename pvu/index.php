@@ -12,7 +12,7 @@
     <br/>
     Group: <input name="group" value="4"/>
     <br/>
-    Hour of group: <input name="hour" value="01-9-2021 10:06:00"/>
+    Hour of group: <input name="hour" value="01-9-2021 23:36:00"/>
     <br/>
     Factor: <input name="factor" value="+30 minute"/>
     <br/>
