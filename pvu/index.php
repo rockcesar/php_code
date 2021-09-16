@@ -20,5 +20,5 @@
 
 </form>
 
-<br/>Donaciones:<br/><br/>
+<br/>Donaciones (para mejorar el Servidor):<br/><br/>
 <a href="https://dev-rockcesar.blogspot.com/2020/09/pagar-con-criptolago.html">https://dev-rockcesar.blogspot.com/2020/09/pagar-con-criptolago.html</a>
